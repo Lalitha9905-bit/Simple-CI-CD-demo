@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML + CSS + JS Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <button onclick="changeText()">Click Me</button>
+  <script>
+    function changeText() {
+      let btn = document.querySelector("button");
+      let h1 = document.querySelector("h1");     
+      if (btn.innerText === "Click Me") {
+        btn.innerText = "Clicked!";
+        btn.style.backgroundColor = "green";
+        h1.innerText = "You clicked the button!";
+      } else {
+        btn.innerText = "Click Me";
+        btn.style.backgroundColor = "#3498db";
+        h1.innerText = "Hello, World!";
+      }
+    }
+  </script>
+</body>
+</html>
